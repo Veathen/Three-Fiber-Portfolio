@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import Sizes from "./Sizes"
 import Camera from "./Camera";
+import Renderer from "./Renderer"
 import { ReactThreeFiber } from "@react-three/fiber";
 
 export default class Experience {
@@ -9,6 +10,7 @@ export default class Experience {
     sizes: Sizes;
     scene: THREE.Scene;
     camera: Camera;
+    renderer: Renderer;
     constructor (canvas: any) {
         if(Experience.instance){
             return Experience.instance
@@ -18,6 +20,7 @@ export default class Experience {
         this.canvas = canvas;
         this.scene = new THREE.Scene();
         this.camera = new Camera();
+        this.renderer = new Renderer();
         console.log("THis shit better fucking work jesus h christ.")
         
     }

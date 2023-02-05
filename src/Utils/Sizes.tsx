@@ -3,6 +3,7 @@ export default class Sizes{
     height: number;
     aspect: number;
     pixelRatio: number;
+    frustrum: number;
     constructor() {
         this.width = window.innerWidth;
         this.height = window.innerHeight;
