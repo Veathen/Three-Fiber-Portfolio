@@ -19,7 +19,7 @@ export default class Renderer{
         this.scene = this.experience.scene;
         this.canvas = this.experience.canvas;
         this.camera = this.experience.camera;
-
+        this.setRenerer();
         console.log(this.camera, this.camera.perspectiveCamera);
 
         this.setRenerer();
@@ -31,6 +31,7 @@ export default class Renderer{
             canvas: this.canvas,
             antialias: true,
         });
+
         this.renderer.physicallyCorrectLights = true;
         this.renderer.outputEncoding = THREE.sRGBEncoding;
         this.renderer.toneMapping = THREE.CineonToneMapping;
