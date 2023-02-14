@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/catWeb.glb')
+  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/catWeb.glb')
   return (
     <group {...props} dispose={null}>
       <group scale={[1, 1, 0.76]}>
@@ -21,4 +21,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/catWeb.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/catWeb.glb')
